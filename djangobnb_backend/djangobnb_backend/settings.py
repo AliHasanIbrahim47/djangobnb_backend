@@ -29,6 +29,7 @@ AUTH_USER_MODEL = 'useraccount.User'
 
 WEBSITE_URL = 'http://localhost:8000'
 
+# for channel
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels.layers.InMemoryChannelLayer'
@@ -91,7 +92,7 @@ REST_AUTH = {
 # Application definition
 
 INSTALLED_APPS = [
-    'daphne',
+    'daphne', # for channel
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -111,6 +112,7 @@ INSTALLED_APPS = [
 
     'corsheaders',
 
+    'chat',
     'property',
     'useraccount',
 ]
